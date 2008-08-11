@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- This overlay is for Thunderbird -->
+
+<overlay id="babelbird" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script language="javascript" type="application/x-javascript" src="babelbird.js"/>
+  <script language="javascript" type="application/x-javascript"><![CDATA[//
+    /////////////////////////////////////////////////////
+    window.addEventListener("load", BabelBird.onMailWindowLoad, true);
+    ////////////
+]]></script>
+  <script language="javascript" type="application/x-javascript"><![CDATA[//
+    /////////////////////////////////////////////////////
+	function changeLanguage(code) {
+		BabelBird.toLanguage=code;
+		document.getElementById('statusbar-text-BB').value="en-"+code;
+	}
+    ////////////
+]]></script>
+
+<statusbar id="status-bar">
+<prefpane id="test_noprefwindow" hidden="true"/>
+	<tooltip id="statusbar-tooltip-BB" orient="vertical">
+		<description value="Email translation settings"/>
+	</tooltip>
+	<statusbarpanel id="statusbar-BB" mode="full" class="statusbarpanel-menu-iconic" tooltip="statusbar-tooltip-BB" hidden="false" persist="hidden ccode mode">
+		<label id="statusbar-text-BB" class="statusbarpanel-text" value="en-en"/>
+		<menupopup>
+			<menuitem type="radio" flagitem="true" id="en-en" label="en-en" oncommand="changeLanguage('en')" checked="true"/>
+			<menuitem type="radio" flagitem="true" id="en-ar" label="en-ar" oncommand="changeLanguage('ar')"/>
+			<menuitem type="radio" flagitem="true" id="en-bg" label="en-bg" oncommand="changeLanguage('bg')"/>
+			<menuitem type="radio" flagitem="true" id="en-zh" label="en-zh" oncommand="changeLanguage('zh')"/>
+			<menuitem type="radio" flagitem="true" id="en-cn" label="en-cn" oncommand="changeLanguage('cn')"/>
+			<menuitem type="radio" flagitem="true" id="en-tw" label="en-tw" oncommand="changeLanguage('tw')"/>
+			<menuitem type="radio" flagitem="true" id="en-hr" label="en-hr" oncommand="changeLanguage('hr')"/>
+			<menuitem type="radio" flagitem="true" id="en-cs" label="en-cs" oncommand="changeLanguage('cs')"/>
+			<menuitem type="radio" flagitem="true" id="en-da" label="en-da" oncommand="changeLanguage('da')"/>
+			<menuitem type="radio" flagitem="true" id="en-dl" label="en-dl" oncommand="changeLanguage('dl')"/>
+			<menuitem type="radio" flagitem="true" id="en-fi" label="en-fi" oncommand="changeLanguage('fi')"/>
+			<menuitem type="radio" flagitem="true" id="en-fr" label="en-fr" oncommand="changeLanguage('fr')"/>
+			<menuitem type="radio" flagitem="true" id="en-de" label="en-de" oncommand="changeLanguage('de')"/>
+			<menuitem type="radio" flagitem="true" id="en-el" label="en-el" oncommand="changeLanguage('el')"/>
+			<menuitem type="radio" flagitem="true" id="en-hi" label="en-hi" oncommand="changeLanguage('hi')"/>
+			<menuitem type="radio" flagitem="true" id="en-it" label="en-it" oncommand="changeLanguage('it')"/>
+			<menuitem type="radio" flagitem="true" id="en-ja" label="en-ja" oncommand="changeLanguage('ja')"/>
+			<menuitem type="radio" flagitem="true" id="en-ko" label="en-ko" oncommand="changeLanguage('ko')"/>
+			<menuitem type="radio" flagitem="true" id="en-no" label="en-no" oncommand="changeLanguage('no')"/>
+			<menuitem type="radio" flagitem="true" id="en-pl" label="en-pl" oncommand="changeLanguage('pl')"/>
+			<menuitem type="radio" flagitem="true" id="en-pt" label="en-pt" oncommand="changeLanguage('pt')"/>
+			<menuitem type="radio" flagitem="true" id="en-ro" label="en-ro" oncommand="changeLanguage('ro')"/>
+			<menuitem type="radio" flagitem="true" id="en-ru" label="en-ru" oncommand="changeLanguage('ru')"/>
+			<menuitem type="radio" flagitem="true" id="en-es" label="en-es" oncommand="changeLanguage('es')"/>
+			<menuitem type="radio" flagitem="true" id="en-sv" label="en-sv" oncommand="changeLanguage('sv')"/>
+		</menupopup>
+	</statusbarpanel>
+</statusbar>
+
+</overlay>

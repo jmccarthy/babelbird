@@ -1,0 +1,5 @@
+content babelbird chrome/content/babelbird/
+skin babelbird classic/1.0 chrome/skin/classic/babelbird/
+
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://babelbird/content/bbMailWindowOverlay.xul
+
